@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展选择器</title>
+    <style>
+        /* 子选择器 对div下的p产生作用 */
+        div p{
+            color: red;
+        }
+        /* 父选择器,对p的div标签产生作用, 对象必须即在p中,也在div中 */
+        div > p{
+            border: 1px solid; /*  没加solid没边框  */
+            width: 100px;
+            height:10px;
+            /*  定义了方框内问题的字体大小,并且会影响方框的属性height(如果没有显式地注明的话)
+                但是height不影响字体大小 (单向影响)   */
+            font-size: 20px;
+        }
+        /* 属性选择器,主要是input这里 */
+        input[type='text']{
+            border: 3px solid;
+        }
+        /* 超链接a的默认状态: 这里定义color为金色 */
+        a:link{
+            color: gold;
+        }
+        /*超链接a的鼠标悬浮状态: 这里定义color为海蓝色*/
+        a:hover{
+            color: aqua;
+        }
+        /*超链接a的正在访问状态: 这里定义color为深蓝色*/
+        a:active{
+            color: blue;
+        }
+        /*超链接a的被访问状态: 这里定义color为绿色*/
+        a:visited{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>传智播客</p>
+        牛逼class
+    </div>
+    <p>test div p黑马</p>
+    <div>test div>p</div>
+
+    <input type="text"> <br>
+    <input type="password"> <br>
+
+    <a href="#">MZP</a>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width: 100px;
+        }
+        /*  div1里面没border的，因为div1的定义也是在div里，所以这里也有个边框  */
+        .div1{
+            width:100px;
+            height:100px;
+            /* div1的外边距 */
+            /*margin: 50px;*/
+        }
+        .div2{
+            width: 200px;
+            height: 200px;
+            /*  内边距可能会改变大小，需要加box-sizing  */
+            padding: 50px;
+            /*  设置盒子属性,让width和height就是最终大小  */
+            box-sizing: border-box;
+        }
+        /* 浮动后固定在同一行? */
+        .div3{
+            float: left;
+        }
+        .div4{
+            float:left;
+        }
+        .div5{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="div2">
+        <div class="div1"></div>
+    </div>
+    <!-- 自动换行 -->
+    <!--  <div>aaaa</div>  -->
+    <!--  <div>bbbb</div>  -->
+    <!--  <div>cccc</div>  -->
+      <div class="div3">aaaa</div>
+      <div class="div4">bbbb</div>
+      <div class="div5">cccc</div>
+</body>
+</html>
