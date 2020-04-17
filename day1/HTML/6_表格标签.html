@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+    <!--  要注意html的表格,和word等的表格是不一样的  -->
+    <!--  html表格只有行,行内有单元格 table整个表、tr行、td单元格 -->
+    <!--
+        cellpadding: 定义内容和单元格的距离，上下左右
+        cellspacing: 定义单元格之间的距离,指定为0则单元格线会合为一条
+        -->
+    <!--  table属性的align居中，是让table处于整个页面的中间  -->
+    <table border="1" width="50%" cellpadding="0"  cellspacing="0"  bgcolor="aqua" align="center">
+        <tr>
+            <!--<td>编号</td>-->
+            <!--<td>姓名</td>-->
+            <!--<td>成绩</td>-->
+            <!-- 可以认为th是特殊的td ，th会自动使单元格内容居中 加粗-->
+            <th>编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>麦狄龙</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>马志鹏</td>
+            <td>100</td>
+        </tr>
+    </table>
+    <hr size="10" color="yellow">
+    <table border="1" width="50%" cellpadding="0" cellspacing="0" bgcolor="aqua" align="center">
+        <!--  thead tbody tfoot是规定表格的头 体 尾，可避免因行顺序混乱的问题  -->
+        <thead>
+            <caption>学生信息表</caption>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <!--  tbody 上也可以定义居中等属性（一步到位），就不用每一行都去定义居中属性。-->
+        <tbody align="center">
+        <!--  tr可以定义整行居中（一步到位），不用每个单元格都去设置居中。-->
+            <tr bgcolor="blue" align="center">
+                <td>1</td>
+                <td>麦狄龙</td>
+                <td>90</td>
+            </tr>
+            <tr align="center">
+                <td>2</td>
+                <td>马志鹏</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <!--  tfoot使得该行必定处于表格最下端  -->
+        <tfoot>
+            <tr align="center">
+                <td>3</td>
+                <td>尹志平</td>
+                <td>40</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr size="10" color="yellow">
+
+    <!--  合并单元格  -->  <!-- border是表格的线，不仅是最外面的框，跟单元格的框也有些许联系 -->
+    <table border="1" width="50%" cellpadding="0" cellspacing="0" bgcolor="aqua" align="center">
+        <tr>
+            <th rowspan="2">编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+        <tr>
+              <!--<td>1</td>-->
+            <td>麦狄龙</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td colspan="2">马志鹏</td>
+            <!--  <td>100</td>  -->
+        </tr>
+    </table>
+    <hr>
+
+</body>
+</html>

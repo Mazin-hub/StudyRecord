@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体属性</title>
+    <style>
+        p{
+            color: gold;
+            font-size: 30px;
+            /* p段落中文本的对齐方式 */
+            text-align: center;
+            /* p段落中每一行的高度 */
+            line-height: 200px;
+            /*   边框,几乎都会有这属性,可以当成设计的模块   */
+            /*参数px是边框的粗细,solid表示显示,有效,后面是边框的颜色.*/
+            border: 1px solid red;
+        }
+        div{
+            /*这个color针对div内容*/
+            color: blueviolet;
+            border: 1px solid gold;
+            /*  高、宽针对border */
+            height: 200px;
+            width: 200px;
+            /* 背景,针对border */
+            /*  url链接一张背景图, no-repeat是防止
+             图片大小 小于 border时重复以填满整个空间.center是让背景图置中央  */
+            background: url("../HTML/image/logo.jpg") no-repeat center ;
+        }
+    </style>
+</head>
+<body>
+    <p>MZP<br>MZP</p>
+    <div>悬浮于背景上的文字</div>
+</body>
+</html>
