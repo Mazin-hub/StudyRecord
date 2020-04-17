@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+    <form action="#">
+        <!-- form 采集用户数据的范围-->
+        <!--
+          action:指定提交数据的url
+          method:指定提交方式,共7种,常用get（显示提交信息）、post（不显示提交信息）
+         -->
+        用户名:<input name="username" value="文本框默认值，跟placeholder不一样" size="30"><br>
+        密码:<input name="password"><br>
+        <input type="submit" value="登录">
+    </form>
+    <hr>
+    <!-- input中的type属性 value是信息-->
+    <form action="#" method="get">
+        <!-- 用户名、密码(即输入框)也有一个value,是在文本框的默认值  label去比较用户名框和密码框-->
+        <label for="username">用户名</label>:<input type="text" name="username" placeholder="请输入用户名" id="username"><br>
+
+        密码:<input type="password" name="password" placeholder="请输入密码"><br>
+
+        性别:  <!-- radio单选框，配合同一name属性，不然没效果  -->
+        <input type="radio" name="gender" value="male" checked="checked"> 男   <!--checked属性在哪里就是默认值,可以省略 ="checked" -->
+        <input type="radio" name="gender" value="female"> 女<br>
+
+        爱好:
+        <input type="checkbox" name="hobby" value="shopping"> 逛街  <!-- 选择框 value的作用是 编写提交的信息，除了文本框是直接显示出来，大部分value都是提交信息 -->
+        <input type="checkbox" name="hobby" value="Java" checked> Java
+        <input type="checkbox" name="hobby" value="game"> 游戏 <br>
+
+        图片:<input type="file" name="file"><br>
+
+        隐藏域:<input type="hidden" name="id" value="aaa"><br>
+
+        取色器:<input type="color" name="color"> <br>
+
+        生日:<input type="date" name="birthday"> <br>
+        生日:<input type="datetime-local" name="birthday"> <br>
+
+        邮箱:<input type="email" name="email"> <br>
+
+        年龄:<input type="number" name="age"> <br>
+
+        省份: <select name="province">
+                <option>--请选择</option>
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="3">广州</option>
+          </select> <br>
+
+        自我描述:
+        <textarea cols="5" rows="5" name="des"></textarea>
+
+        <br>
+
+        <input type="submit" value="登录" >
+        <input type="button" value="一个普通按钮"> <br>
+        <!--  点击图片算提交  -->
+        <input type="image" src="image/jiangxuan_1.jpg">
+    </form>
+
+
+</body>
+</html>

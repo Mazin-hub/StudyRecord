@@ -9,24 +9,27 @@
         <!-- form 采集用户数据的范围-->
         <!--
           action:指定提交数据的url
-          method:指定提交方式,共7种,常用get、post
+          method:指定提交方式,共7种,常用get（显示提交信息）、post（不显示提交信息）
          -->
-        用户名:<input name="username"><br>
+        用户名:<input name="username" value="文本框默认值，跟placeholder不一样" size="30"><br>
         密码:<input name="password"><br>
         <input type="submit" value="登录">
     </form>
     <hr>
-    <!-- input中的type属性 value是提交信息-->
+    <!-- input中的type属性 value是信息-->
     <form action="#" method="get">
-        <!-- 用户名、密码(即输入框)也有一个value,是在文本框的默认值  label比较用户名框和密码框-->
+        <!-- 用户名、密码(即输入框)也有一个value,是在文本框的默认值  label去比较用户名框和密码框-->
         <label for="username">用户名</label>:<input type="text" name="username" placeholder="请输入用户名" id="username"><br>
+
         密码:<input type="password" name="password" placeholder="请输入密码"><br>
 
-        性别:<input type="radio" name="gender" value="male" checked="checked"> 男   <!--checked属性在哪里就是默认值,可以省略 ="checked" -->
+        性别:  <!-- radio单选框，配合同一name属性，不然没效果  -->
+        <input type="radio" name="gender" value="male" checked="checked"> 男   <!--checked属性在哪里就是默认值,可以省略 ="checked" -->
         <input type="radio" name="gender" value="female"> 女<br>
 
-        爱好:<input type="checkbox" name="hobby" value="shopping"> 逛街  <!-- 选择框 value的作用是 编写提交的信息 -->
-        <input type="checkbox" name="hobby" value="Java" checked="checked"> Java
+        爱好:
+        <input type="checkbox" name="hobby" value="shopping"> 逛街  <!-- 选择框 value的作用是 编写提交的信息，除了文本框是直接显示出来，大部分value都是提交信息 -->
+        <input type="checkbox" name="hobby" value="Java" checked> Java
         <input type="checkbox" name="hobby" value="game"> 游戏 <br>
 
         图片:<input type="file" name="file"><br>
@@ -52,8 +55,11 @@
         自我描述:
         <textarea cols="5" rows="5" name="des"></textarea>
 
+        <br>
+
         <input type="submit" value="登录" >
         <input type="button" value="一个普通按钮"> <br>
+        <!--  点击图片算提交  -->
         <input type="image" src="image/jiangxuan_1.jpg">
     </form>
 

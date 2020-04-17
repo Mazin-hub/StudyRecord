@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
+    <!--<style>-->
+        <!--#img{-->
+            <!--vertical-align:middle ;-->
+        <!--}-->
+    <!--</style>-->
 </head>
 <body>
     <!--定义表单 form-->
     <form action="#" method="post">
-        <table border="1" align="center" width="500">
+        <table border="1" align="center" width="500" cellspacing="0">
             <tr>
                 <td><label for="username">用户名</label></td>
                 <td><input type="text" name="username" placeholder="请输入用户名" id="username"></td>
@@ -42,8 +47,9 @@
             <tr>
                 <td><label for="checkcode">验证码</label></td>
                 <td>
+                    <!--  输入框怎么变长？ -->
                     <input type="text" name="checkcode"  id="checkcode">
-                    <img src="image/logo.jpg">
+                    <img id="img" src="../CSS/img/verify_code.jpg" height="40">
                 </td>
             </tr>
             <tr>
