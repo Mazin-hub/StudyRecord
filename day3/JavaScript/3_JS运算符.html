@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运算符</title>
+
+    <script>
+        var num = 3;
+        var a = ++num;
+        document.write(num+"<br>")
+        document.write(a+"<br>")
+        document.write("自增<hr>")
+
+        //  这个 +- 号至关重要,直接代表正负，一出现就是number类型
+        var b = +"123";
+        // var b = +"abc";
+        // alert(typeof(b));
+        // alert(b+1);
+
+        var flag = +true;
+        var f2 = +false;
+        document.write(typeof (flag) + "<br>")
+        document.write(flag + "<br>")
+        document.write(f2 + "<br>")
+
+        document.write("正负<hr>");
+        // +-*/%
+        var n1 = 3;
+        var n2 = 4;
+        // 0.75 跟java不一样，毕竟number类型可以小数
+        document.write(n1/n2+"<br>");
+        document.write("运算<hr>");
+
+        document.write((3 > 4)+"<br>")
+
+        // 字符串之间，按位比较
+        document.write(("abc" > "acd") + "<br>")
+
+        // 字符串和数值比较 < > <= >=，字符串先转化成number。
+        document.write(("123" === 123) + "<br>") // fasle，先比较类型,类型不一样直接false
+        document.write(("123" == 123) + "<br>")  // true, 不比较类型，转化后只比较内容
+        document.write("比较<hr>");
+
+        // 逻辑运算符 短路与&&、 短路或||、非！
+        // 非：针对 boolean，其他类型需要做转化
+        var f = true;
+        document.write("TEST1: 常见布尔"+"<br>");
+        document.write(f +"<br>");
+        document.write(!f+"<br>");
+
+        var num1 = 3;
+        var num2 = NaN;
+        document.write("TEST2: 普通数字"+"<br>");
+        document.write(num1+"<br>");
+        document.write(!num1+"<br>");
+        document.write(!!num1+"<br>");
+        // NaN 转为boolean是假, 其他类型转化成boolean，用两个非
+        document.write("TEST3: NaN"+"<br>");
+        document.write(num2+"<br>");
+        document.write(!num2+"<br>");
+        document.write(!!num2+"<br>");
+
+        var s1 = "";
+        var s2 = "avd";
+        document.write("TEST4:  0长度字符串（不是空字符串）、有长度字符串"+"<br>");
+        document.write(!!s1+"<br>");
+        document.write(!!s2+"<br>");
+
+        var obj = null;
+        var obj2;
+        document.write("TEST5: null（空）、undefined"+"<br>");
+        document.write(!!obj+"<br>");
+        document.write(!!obj2+"<br>");
+
+        var date = new Date();
+        document.write("TEST6: 对象必为真"+"<br>");
+        document.write(!!date+"<br>");
+
+        var ob = "";
+        var ob1 = new Date();
+        var ob2 = null;  // 在JS里，null 是一种类型
+        if(ob){
+            alert("123");
+        }
+        if(ob1){
+            alert("111");
+        }
+        if(!ob2){
+            alert("222");
+        }
+        document.write("逻辑运算<hr>")
+
+        // 三元运算
+        var q = 3;
+        var p = 4;
+        alert(q < p ? 1 : 0);
+        document.write((q + " < " + p + " ? " + "1 : 0") + " 结果=" + (q < p ? 1 : 0)+ "<br>");
+        document.write("三元运算符<hr>");
+
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
