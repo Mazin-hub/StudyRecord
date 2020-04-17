@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+    <script>
+        // 定义 弱类型变量
+        // var a = 3;
+        // alert(a);
+        // a = "abc";
+        // alert(a);
+
+        // 定义number类型
+        var num = 1;
+        var num2 = 1.2;
+        var num3 = NaN;
+
+        // 输出到页面上, 一个输出不了，程序直接结束, typeof 查看某个数据是什么类型
+        document.write(num+"---"+ typeof(num)+"<br>");
+        document.write(num2+"---"+ typeof(num)+"<br>");
+        document.write(num3+"---"+ typeof(num)+"<br>");
+
+        // 定义string
+        var str = "abc";
+        var str2 = "edf";
+        document.write(str+"---"+ typeof(str)+"<br>");
+        document.write(str2+"---"+ typeof(str2)+"<br>");
+
+        // 定义boolean
+        var flag = true;
+        document.write(flag+"---"+ typeof(flag)+"<br>");
+
+        // 定义null，undefined, 没赋予初值默认为undefined
+        var obj = null;
+        var obj2 = undefined;
+        var obj3;
+        document.write(obj+"---"+ typeof(obj)+"<br>");
+        document.write(obj2+"---"+ typeof(obj2)+"<br>");
+        document.write(obj3+"---"+ typeof(obj3)+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
