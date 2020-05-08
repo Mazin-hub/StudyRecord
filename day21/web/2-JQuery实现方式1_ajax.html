@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery1实现ajax</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function fun() {
+            // 使用$.ajax()发送异步请求
+            $.ajax({
+                //请求路径
+               url:"ajaxServlet",
+                //请求方式
+               type:"Post",
+                //请求参数
+               // data:"username=jack&age=23"
+                data:{"username":"jack","age":23},
+                // 响应成功后的回调函数
+                success:function (data) {
+               //下面这句成功了，但是Servlet里的write本来要写在页面的，所以是回调函数把Servlet里的响应拦截到了这里?
+                   //  alert("成功")
+                //上面的data应该还有age的，但是这里的data应当是来自Servlet的响应消息包装成的data
+                    alert(data)
+                },
+                // 响应错误执行的回调函数
+                error:function () {
+                    alert("出错了")
+                },
+                dataType:"text"
+            });
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun()">
+
+<input type="text">
+
+</body>
+</html>

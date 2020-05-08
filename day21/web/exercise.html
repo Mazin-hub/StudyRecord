@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $(function () {
+            $.post("url路径",{请求参数},function (data) {
+                //回调函数返回参数data(字符串形式),从远处获得src地址放到data里面
+                $("#image").src=data;
+            },"text")
+        })
+
+    </script>
+</head>
+<body>
+    <img src="" alt="" id="image">
+</body>
+</html>
